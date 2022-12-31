@@ -8,6 +8,30 @@ import personalPic from "../public/personalPic.png";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
+  const personalProjectsObj = [
+    {
+      title: "Pawster",
+      liveSiteLink: "https://pawster-frontend.netlify.app",
+      githubLink: "https://github.com/ametzamaldonado/Pawster-capstone-project",
+      techLangUsed: "React | Javascript | CSS | HTML | Express",
+      description: "< Project description here! >",
+    },
+    {
+      title: "Youtube Clone",
+      liveSiteLink: "https://youtube-team-4.netlify.app/",
+      githubLink: "https://github.com/ametzamaldonado/react-youtube-app",
+      techLangUsed: "React | Javascript | CSS | HTML | Express",
+      description: "< Project description here! >",
+    },
+    {
+      title: "Budgeting App",
+      liveSiteLink: "https://budgeting-app-101.netlify.app/",
+      githubLink: "https://github.com/ametzamaldonado/new-budget-app",
+      techLangUsed: "React | Javascript | CSS | HTML | Express",
+      description: "< Project description here! >",
+    },
+  ];
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -43,6 +67,7 @@ export default function Home() {
               </li>
             </ul>
           </nav>
+
           <div className="text-center p-10 py-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
               Ametzayin Maldonado
@@ -56,18 +81,20 @@ export default function Home() {
             </div>
 
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              Welcome to my personal portfolio website! 
-             <br/>
-             <br/>
-              As a recent graduate of the Pursuit Fellowship, I have gained a strong foundation in
-              various technologies such as JavaScript, HTML, CSS, Node, Express,
-              React/Redux, and PostgreSQL; as well as gained experience working
-              with APIs. In addition, I have learned about data structures, algorithms, and the Agile software development method through sprints. Throughout my time at
-              the Pursuit Fellowship, I have had the opportunity to build a
-              variety of projects that have allowed me to hone my skills and
-              showcase my abilities. On this website, you will find an overview
-              of my completed projects as well as my professional experience.
-              Thank you for visiting my portfolio website. I hope you find it
+              Welcome to my personal portfolio website!
+              <br />
+              <br />
+              As a recent graduate of the Pursuit Fellowship, I have gained a
+              strong foundation in various technologies such as JavaScript,
+              HTML, CSS, Node, Express, React/Redux, and PostgreSQL; as well as
+              gained experience working with APIs. In addition, I have learned
+              about data structures, algorithms, and the Agile software
+              development method through sprints. Throughout my time at the
+              Pursuit Fellowship, I have had the opportunity to build a variety
+              of projects that have allowed me to hone my skills and showcase my
+              abilities. On this website, you will find an overview of my
+              completed projects as well as my professional experience. Thank
+              you for visiting my portfolio website. I hope you find it
               informative and that it provides a clear sense of my capabilities
               as a software developer.
             </p>
@@ -86,68 +113,58 @@ export default function Home() {
                 <AiFillMail className="dark:text-white" />
               </a>
             </div>
-            
           </div>
         </section>
 
         <section className="py-7 mx-auto">
-        <div>
+          <div>
             <h2 className="text-4xl py-2 text-teal-600 text-center font-bold md:text-4xl  dark:text-white">
               My Projects
             </h2>
-        </div>
+          </div>
 
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              {/* <Image src={design} width={100} height={100} /> */}
-              <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
-            </div>
 
-            {/* Youtube Clone */}
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <h3 className="text-lg font-medium pt-8 pb-2 ">
-              Youtube Clone
-              </h3>
-              <p className="py-2">
-                Do you have an idea for your next great website? Let's make it a
-                reality.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
-            </div>
+            {personalProjectsObj.map((item) => (
+              <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+                <h3 className="text-2xl font-medium pt-8 pb-2 ">
+                  {item.title}
+                </h3>
+                <div className="flex justify-around dark:text-white">
+                  <a
+                    className="bg-gradient-to-r from-gray-600 text- to-gray-400 text-white px-4 py-2 rounded-lg mr-1"
+                    href={item.liveSiteLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Site
+                  </a>
 
-            {/* Studio Ghibli App */}
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Studio Ghibli App</h3>
-              <p className="py-2">
-                Are you interested in feedback for your current project? I can
-                give you tips and tricks to level it up.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
-            </div>
+                  <a
+                    className="bg-gradient-to-r from-gray-600 text- to-gray-400 text-white px-4 py-2 rounded-lg ml-1"
+                    href={item.githubLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Github
+                  </a>
+                </div>
+                <h4 className="text-xl pt-3 text-teal-600 font-semibold">
+                  Tech Stack:
+                </h4>
+                <p className="text-gray-800 py-1 text-md font-semibold">
+                  {item.techLangUsed}{" "}
+                </p>
+
+                <p className="px-10">{item.description}</p>
+              </div>
+            ))}
 
           </div>
         </section>
-        
+
         {/* Section for photos displaying projects worked on! */}
+        
         {/* <section className="py-10">
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
@@ -223,7 +240,7 @@ export default function Home() {
         </section> */}
 
         <footer className="py-10 mt-12">
-        <div className="flex justify-between">
+          <div className="flex justify-between">
             <h1 className="text-xl font-burtons  dark:text-white">
               developedbyADM
             </h1>
