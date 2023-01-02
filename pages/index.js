@@ -86,10 +86,8 @@ export default function Home() {
               <br />
               As a recent graduate of the Pursuit Fellowship, I have gained a
               strong foundation in various technologies such as JavaScript,
-              HTML, CSS, Node, Express, React/Redux, and PostgreSQL; as well as
-              gained experience working with APIs. In addition, I have learned
-              about data structures, algorithms, and the Agile software
-              development method through sprints. Throughout my time at the
+              HTML, CSS, Node, Express, React/Redux, PostgreSQL, and
+              gained experience working with APIs. Throughout my time at the
               Pursuit Fellowship, I have had the opportunity to build a variety
               of projects that have allowed me to hone my skills and showcase my
               abilities. On this website, you will find an overview of my
@@ -163,7 +161,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Section for photos displaying projects worked on! */}
+        {/* Section for photos displaying projects worked on! - Working on this component. Stay tuned */}
         
         {/* <section className="py-10">
           <div>
