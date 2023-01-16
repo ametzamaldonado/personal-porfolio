@@ -13,22 +13,22 @@ export default function Home() {
       title: "Pawster",
       liveSiteLink: "https://pawster-frontend.netlify.app",
       githubLink: "https://github.com/ametzamaldonado/Pawster-capstone-project",
-      techLangUsed: "React | Javascript | CSS | HTML | Express",
-      description: "< Project description here! >",
+      techLangUsed: "React | Javascript | CSS | HTML | Express JSX | Material UI | Tailwind | Firebase",
+      description: "As our capstone project, this project was created to connect users with shelters in the hopes that they will foster their preferred shelter animal. The user will log into their account using Google Authentication. After clicking on the Explore button on the home page, they will be directed to a page where they can swipe right (add animals to their likes) or swipe left (view next animal). Also on this page is a button where users can click and be redirected to a page showing their “liked” pets and more information on each pet.",
     },
     {
       title: "Youtube Clone",
       liveSiteLink: "https://youtube-team-4.netlify.app/",
       githubLink: "https://github.com/ametzamaldonado/react-youtube-app",
       techLangUsed: "React | Javascript | CSS | HTML | Express",
-      description: "< Project description here! >",
+      description: "Working in a team of three, our group created a lite version of Youtube that is fully capable of making a query search, displaying and playing a suggested video. Personal contributions to the project included but were not limited to: navbar functionality and appearance, display of our view page after populating search results, ability to play video in a new page that includes the video id in the url path, and the beginnings of our comment section.",
     },
     {
       title: "Budgeting App",
       liveSiteLink: "https://budgeting-app-101.netlify.app/",
       githubLink: "https://github.com/ametzamaldonado/new-budget-app",
-      techLangUsed: "React | Javascript | CSS | HTML | Express",
-      description: "< Project description here! >",
+      techLangUsed: "JavaScript | CSS | HTML | JSX | Heroku/Onrender",
+      description: "As a class project, we were tasked with creating an API with sample expenses/income prompts, and working on the front-end design of our budgeting app. The required features included: (1) an Index, Show, Edit and New page, (2) a functional navigation bar, (3) online deployment of the application, (4) delete functionality (5) and the account total CSS to be responsive based on the amount value, displaying either red, green or neutral.",
     },
   ];
 
@@ -92,8 +92,8 @@ export default function Home() {
               As a recent graduate of the Pursuit Fellowship, I have gained a
               strong foundation in various technologies such as JavaScript,
               HTML, CSS, Node, Express, React/Redux, PostgreSQL, and gained
-              experience working with APIs. Throughout my time at the Pursuit
-              Fellowship, I have had the opportunity to build a variety of
+              experience working with APIs. Throughout my time at the Pursuit, I have 
+              had the opportunity to build a variety of
               projects that have allowed me to hone my skills and showcase my
               abilities. On this website, you will find an overview of my
               completed projects as well as my professional experience. Thank
@@ -133,8 +133,8 @@ export default function Home() {
 
           <div className="lg:flex gap-10">
             {personalProjectsObj.map((item, index) => (
-              <div key={index} className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-                <h3 className="text-2xl font-medium pt-8 pb-2 ">
+              <div key={index} className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+                <h3 className="text-center text-2xl font-medium pt-8 pb-2 ">
                   {item.title}
                 </h3>
                 <div className="flex justify-around dark:text-white">
@@ -156,14 +156,14 @@ export default function Home() {
                     Github
                   </a>
                 </div>
-                <h4 className="text-xl pt-3 text-teal-600 font-semibold">
+                <h4 className="text-center text-xl pt-3 text-teal-600 font-semibold">
                   Tech Stack:
                 </h4>
-                <p className="text-gray-800 py-1 text-md font-semibold">
+                <p className="text-center text-gray-800 py-1 text-md font-semibold">
                   {item.techLangUsed}{" "}
                 </p>
 
-                <p className="px-10">{item.description}</p>
+                <p className="px-10 ">{item.description}</p>
               </div>
             ))}
           </div>
