@@ -3,10 +3,22 @@ import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { AiFillMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { useState } from "react";
 import Image from "next/image";
+
 import personalPic from "../public/personalPic.png";
+import pawsterPic from "../public/pawster-screenshot.png";
+import lawFirmPic from "../public/lawFirm-screenshot.png"
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+
+  const findWebsiteImage = ( website ) => {
+    switch(website) {
+      case 'Pawster':
+        return pawsterPic;
+      case 'F&L Website':
+        return lawFirmPic;
+    }
+  }
 
   const personalProjectsObj = [
     {
@@ -17,12 +29,19 @@ export default function Home() {
       description: "As our capstone project, this project was created to connect users with shelters in the hopes that they will foster their preferred shelter animal. The user will log into their account using Google Authentication. After clicking on the Explore button on the home page, they will be directed to a page where they can swipe right (add animals to their likes) or swipe left (view next animal). Also on this page is a button where users can click and be redirected to a page showing their “liked” pets and more information on each pet.",
     },
     {
-      title: "Youtube Clone",
-      liveSiteLink: "https://youtube-team-4.netlify.app/",
-      githubLink: "https://github.com/ametzamaldonado/react-youtube-app",
-      techLangUsed: "React | Javascript | CSS | HTML | Express",
-      description: "Working in a team of three, our group created a lite version of Youtube that is fully capable of making a query search, displaying and playing a suggested video. Personal contributions to the project included but were not limited to: navbar functionality and appearance, display of our view page after populating search results, ability to play video in a new page that includes the video id in the url path, and the beginnings of our comment section.",
+      title: "F&L Website",
+      liveSiteLink: "https://fixlerlaw-sample.netlify.app/",
+      githubLink: "https://github.com/ametzamaldonado/fixlerlaw-web-sample",
+      techLangUsed: "JavaScript | CSS | Bootstrap | HTML | JSX | Netlify | React App",
+      description: "As a personal project, I created a modern version of my current place of employment's website. I implemented and included all the information that was in the original site, while also adding an interactive contact form, which is fully functional. The website was styled utilizing Bootstrap and was designed to be completely mobile responsive.",
     },
+    // {
+    //   title: "Youtube Clone",
+    //   liveSiteLink: "https://youtube-team-4.netlify.app/",
+    //   githubLink: "https://github.com/ametzamaldonado/react-youtube-app",
+    //   techLangUsed: "React | Javascript | CSS | HTML | Express",
+    //   description: "Working in a team of three, our group created a lite version of Youtube that is fully capable of making a query search, displaying and playing a suggested video. Personal contributions to the project included but were not limited to: navbar functionality and appearance, display of our view page after populating search results, ability to play video in a new page that includes the video id in the url path, and the beginnings of our comment section.",
+    // },
     {
       title: "Budgeting App",
       liveSiteLink: "https://budgeting-app-101.netlify.app/",
@@ -131,9 +150,15 @@ export default function Home() {
             </h2>
           </div>
 
+          
+
           <div className="lg:flex gap-10">
+            
             {personalProjectsObj.map((item, index) => (
-              <div key={index} className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+              <div key={index} className="shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1 overflow-auto">
+                {/* <div className="text-center">
+                  <img src={findWebsiteImage(item.name)} alt={item.name}/>
+                </div> */}
                 <h3 className="text-center text-2xl font-medium pt-8 pb-2 ">
                   {item.title}
                 </h3>
