@@ -119,7 +119,7 @@ export default function Home() {
 
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
               <a
-                href="https://www.linkedin.com/in/ametzayin-maldonado-3528b6124/"
+                href="https://www.linkedin.com/in/ametzayin-maldonado/"
                 target="_blank"
                 rel="noreferrer"
               >
