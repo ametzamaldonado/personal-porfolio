@@ -3,23 +3,23 @@ import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { AiFillMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { useState } from "react";
 import Image from "next/image";
-
+import PawsterTwo from "../public/pawster-two-screen.png"
 import personalPic from "../public/personalPic.png";
 import pawsterPic from "../public/pawster-screenshot.png";
 import lawFirmPic from "../public/lawFirm-screenshot.png";
-import BudgetingApp from "../public/budget-screenshot.png";
+import BudgetingApp from "../public/budget-screen.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
   const personalProjectsObj = [
     {
-      title: "Pawster",
-      image: pawsterPic,
-      liveSiteLink: "https://pawster-frontend.netlify.app",
-      githubLink: "https://github.com/ametzamaldonado/Pawster-capstone-project",
-      techLangUsed: "React | Javascript | CSS | HTML | Express JSX | Material UI | Tailwind | Firebase",
-      description: "As our capstone project, this project was created to connect users with shelters in the hopes that they will foster their preferred shelter animal. The user will log into their account using Google Authentication. After clicking on the Explore button on the home page, they will be directed to a page where they can swipe right (add animals to their likes) or swipe left (view next animal). Also on this page is a button where users can click and be redirected to a page showing their “liked” pets and more information on each pet.",
+      title: "Pawster 2.0",
+      image: PawsterTwo,
+      liveSiteLink: "https://pawster-two-demo.netlify.app/",
+      githubLink: "https://github.com/ametzamaldonado/pawster-ver-two",
+      techLangUsed: "React | Javascript | CSS | HTML | React-Bootstrap | Firebase | NoSql",
+      description: "Welcome to the revamped version of Pawster! Building on the original project's goal of connecting users with shelters, I utilized various tools such as React-Bootstrap, Firebase auth, Cloud Storage, and Firestore/NoSQL to create a more efficient and user-friendly platform. Users can easily sign up or login to explore animals available for fostering by swiping right to add to their likes or left to view the next animal. ",
     },
     {
       title: "F&L Website",
@@ -37,13 +37,21 @@ export default function Home() {
     //   description: "Working in a team of three, our group created a lite version of Youtube that is fully capable of making a query search, displaying and playing a suggested video. Personal contributions to the project included but were not limited to: navbar functionality and appearance, display of our view page after populating search results, ability to play video in a new page that includes the video id in the url path, and the beginnings of our comment section.",
     // },
     {
+      title: "Pawster (1st Version)",
+      image: pawsterPic,
+      liveSiteLink: "https://pawster-frontend.netlify.app",
+      githubLink: "https://github.com/ametzamaldonado/Pawster-capstone-project",
+      techLangUsed: "React | Javascript | CSS | HTML | Express JSX | Material UI | Tailwind | Firebase",
+      description: "As our capstone project, this project was created to connect users with shelters in the hopes that they will foster their preferred shelter animal. The user will log into their account using Google Authentication. After clicking on the Explore button on the home page, they will be directed to a page where they can swipe right (add animals to their likes) or swipe left (view next animal). Also on this page is a button where users can click and be redirected to a page showing their “liked” pets and more information on each pet.",
+    },
+    {
       title: "Budgeting App",
       image: BudgetingApp,
       liveSiteLink: "https://budgeting-app-101.netlify.app/",
       githubLink: "https://github.com/ametzamaldonado/new-budget-app",
       techLangUsed: "JavaScript | CSS | HTML | JSX | Heroku/Onrender",
       description: "As a class project, we were tasked with creating an API with sample expenses/income prompts, and working on the front-end design of our budgeting app. The required features included: (1) an Index, Show, Edit and New page, (2) a functional navigation bar, (3) online deployment of the application, (4) delete functionality (5) and the account total CSS to be responsive based on the amount value, displaying either red, green or neutral.",
-    },
+    }
   ];
 
   return (
@@ -75,7 +83,7 @@ export default function Home() {
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 text- to-teal-600 text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="https://docs.google.com/document/d/1KQCjmGtU2QJ-hmPTbpXr9mGy_uOYyxjM/export?format=pdf"
+                  href="https://docs.google.com/document/d/1sSu0cYR26zRwWWVuVMwJmuXJhEYGrmas/export?format=pdf"
                 >
                   Resume
                 </a>
@@ -104,17 +112,7 @@ export default function Home() {
               Welcome to my personal portfolio website!
               <br />
               <br />
-              As a recent graduate of the Pursuit Fellowship, I have gained a
-              strong foundation in various technologies such as JavaScript,
-              HTML, CSS, Node, Express, React/Redux, PostgreSQL, and gained
-              experience working with APIs. Throughout my time at the Pursuit, I have 
-              had the opportunity to build a variety of
-              projects that have allowed me to hone my skills and showcase my
-              abilities. On this website, you will find an overview of my
-              completed projects as well as my professional experience. Thank
-              you for visiting my portfolio website. I hope you find it
-              informative and that it provides a clear sense of my capabilities
-              as a software developer.
+             I'm a recent graduate of the Pursuit Fellowship with a strong foundation in various technologies such as JavaScript, HTML, CSS, Node, Express, React/Redux, PostgreSQL, and experience working with APIs. Throughout my time at the Pursuit, I had the opportunity to build a variety of projects that allowed me to hone my skills and showcase my abilities. On this website, you'll find an overview of my completed projects as well as my professional experience. Thank you for taking the time to visit my portfolio website.
             </p>
 
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
