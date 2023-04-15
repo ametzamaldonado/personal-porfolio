@@ -112,7 +112,7 @@ export default function Home() {
               Welcome to my personal portfolio website!
               <br />
               <br />
-             I'm a recent graduate of the Pursuit Fellowship with a strong foundation in various technologies such as JavaScript, HTML, CSS, Node, Express, React/Redux, PostgreSQL, and experience working with APIs. Throughout my time at the Pursuit, I had the opportunity to build a variety of projects that allowed me to hone my skills and showcase my abilities. On this website, you'll find an overview of my completed projects as well as my professional experience. Thank you for taking the time to visit my portfolio website.
+             {"I'm a recent graduate of the Pursuit Fellowship with a strong foundation in various technologies such as JavaScript, HTML, CSS, Node, Express, React/Redux, PostgreSQL, and experience working with APIs. Throughout my time at the Pursuit, I had the opportunity to build a variety of projects that allowed me to hone my skills and showcase my abilities. On this website, you'll find an overview of my completed projects as well as my professional experience. Thank you for taking the time to visit my portfolio website."}
             </p>
 
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
